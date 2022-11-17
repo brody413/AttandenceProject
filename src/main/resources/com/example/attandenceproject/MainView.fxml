@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.attandenceproject.MainViewController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 
-
-</VBox>
+<AnchorPane prefHeight="370.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.attandenceproject.MainViewController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="55.0" layoutY="28.0" prefHeight="366.0" prefWidth="447.0">
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Attandence Checker" textAlignment="CENTER">
+               <font>
+                  <Font name="Times New Roman Bold" size="34.0" />
+               </font>
+            </Label>
+            <Label text="Please Select Teacher Below!" textAlignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="17.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" top="20.0" />
+               </padding>
+            </Label>
+            <ListView fx:id="teacherListView" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

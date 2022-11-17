@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="393.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.attandenceproject.secondaryViewController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="59.0" layoutY="30.0" prefHeight="342.0" prefWidth="475.0" spacing="5.0">
+         <children>
+            <Label text="Attandence Checker">
+               <font>
+                  <Font name="Times New Roman Bold" size="34.0" />
+               </font>
+            </Label>
+            <Label text="Please Select a Student to Modify">
+               <padding>
+                  <Insets bottom="20.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Times New Roman" size="17.0" />
+               </font>
+            </Label>
+            <ListView fx:id="studentListView" prefHeight="200.0" prefWidth="200.0" />
+            <Button fx:id="backToMainMenuBTN" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Main Menu" textAlignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+         </children></VBox>
+   </children>
+</AnchorPane>
