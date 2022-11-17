@@ -1,5 +1,5 @@
 package Models;
-
+import java.sql.SQLException;
 public class Teacher {
 
     private int id;
@@ -11,6 +11,18 @@ public class Teacher {
         setFirstName(firstName);
         setLastName(lastName);
         setClassName(className);
+    }
+
+    public Teacher(String firstName, String lastName, String className){
+        setFirstName(firstName);
+        setLastName(lastName);
+        setClassName(className);
+
+        try {
+            id = DBUtility.addNewTeacher(this);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public int getId() {
