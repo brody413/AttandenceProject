@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -20,6 +21,8 @@ import java.sql.SQLException;
 
 public class TeacherListViewController {
     @FXML
+    public Button createTeacherBTN;
+    @FXML
     private ListView<Teacher> teacherListView;
 
     @FXML
@@ -27,8 +30,6 @@ public class TeacherListViewController {
 
         teacherListView.getItems().removeAll();
         teacherListView.getItems().addAll(DBUtility.getAllTeachers());
-
-
         teacherListView.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
@@ -44,6 +45,16 @@ public class TeacherListViewController {
                     stage.show();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
+                }
+            }
+        });
+        createTeacherBTN.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                try {
+                    SceneChanger.changeScene(mouseEvent, "AddTeacherView.fxml", "Add Teacher");
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
         });

@@ -32,7 +32,7 @@ public class DBUtility {
                     "VALUES (?,?,?)";
 
             //3. prepare the query with the SQL
-            preparedStatement = conn.prepareStatement(sql, new String[]{"teacherId"});
+            preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             //4. bind the values to the datatypes
             preparedStatement.setString(1, newTeacher.getFirstName());
@@ -75,7 +75,7 @@ public class DBUtility {
                     "VALUES (?,?,?,?,?)";
 
             //3. prepare the query with the SQL
-            preparedStatement = conn.prepareStatement(sql, new String[]{"studentId"});
+            preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             //4. bind the values to the datatypes
             preparedStatement.setString(1, newStudent.getFirstName());
