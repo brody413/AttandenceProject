@@ -71,8 +71,8 @@ public class DBUtility {
                     user, password);
 
             //2. Create SQL String
-            String sql = "INSERT INTO students (firstName, lastName, Teacher, isPresent) " +
-                    "VALUES (?,?,?,?,?)";
+            String sql = "INSERT INTO students (firstName, lastName, teacherID, isPresent) " +
+                    "VALUES (?,?,?,?)";
 
             //3. prepare the query with the SQL
             preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);

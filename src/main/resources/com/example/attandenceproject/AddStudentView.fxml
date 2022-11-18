@@ -39,12 +39,12 @@
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" text="Back">
+                  <Button mnemonicParsing="false" onAction="#back" text="Back">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" text="Create">
+                  <Button mnemonicParsing="false" onAction="#submit" text="Create">
                      <font>
                         <Font size="18.0" />
                      </font>

@@ -3,6 +3,7 @@ package com.example.attandenceproject;
 import Models.DBUtility;
 import Models.Student;
 import Models.Teacher;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,12 +19,12 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class StudentListViewController {
-
+    @FXML
+    public Button addStudentBTN;
     @FXML
     private ListView<Student> studentListView;
     @FXML
     private Button backToMainMenuBTN;
-
 
     @FXML
     private void initialize() {
@@ -64,6 +65,14 @@ public class StudentListViewController {
             studentListView.getItems().addAll(DBUtility.getAllStudents().stream().filter(student -> student.getTeacher().getId() == teacher.getId()).toList());
         } catch (SQLException e){
 
+        }
+    }
+
+    public void addStudent(Event event){
+        try {
+            SceneChanger.changeScene(event, "AddStudentView.fxml", "Add Student");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
