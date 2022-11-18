@@ -3,17 +3,17 @@ package Models;
 public class Student {
 
     private int id;
-    private String firstName, lastName, teacher;
+    private String firstName, lastName;
+    Teacher teacher;
 
-    boolean isPresent, isNotPresent;
+    boolean[] isPresent;
 
-    public Student(int id, String firstName, String lastName, boolean isPresent, boolean isNotPrsent, String teacher) {
+    public Student(int id, String firstName, String lastName, boolean[] isPresent, Teacher teacher) {
         setId(id);
         setFirstName(firstName);
         setLastName(lastName);
         setTeacher(teacher);
         setPresent(isPresent);
-        setNotPresent(isNotPresent);
     }
 
     public int getId() {
@@ -40,27 +40,19 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public boolean isPresent() {
+    public boolean[] isPresent() {
         return isPresent;
     }
 
-    public void setPresent(boolean present) {
+    public void setPresent(boolean[] present) {
         isPresent = present;
     }
 
-    public boolean isNotPresent() {
-        return isNotPresent;
-    }
-
-    public void setNotPresent(boolean notPresent) {
-        isNotPresent = notPresent;
-    }
-
-    public String getTeacher() {
+    public Teacher getTeacher() {
         return teacher;
     }
 
-    public void setTeacher(String teacher) {
+    public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
 

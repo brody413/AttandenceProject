@@ -6,7 +6,7 @@
 <?import javafx.scene.text.*?>
 
 
-<AnchorPane prefHeight="370.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.attandenceproject.MainViewController">
+<AnchorPane prefHeight="370.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.attandenceproject.TeacherListViewController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="55.0" layoutY="28.0" prefHeight="366.0" prefWidth="447.0">
          <children>

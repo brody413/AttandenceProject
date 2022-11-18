@@ -1,4 +1,4 @@
 package com.example.attandenceproject;
 
-public class secondaryViewController {
+public class AddTeacherViewController {
 }

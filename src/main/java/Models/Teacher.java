@@ -56,4 +56,8 @@ public class Teacher {
     public void setClassName(String className) {
         this.className = className;
     }
+
+    public String toString() {
+        return String.format("%s %s: %s", getFirstName(), getLastName(), getClassName());
+    }
 }
