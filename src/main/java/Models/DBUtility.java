@@ -51,7 +51,7 @@ public class DBUtility {
         {
             e.printStackTrace();
         }
-        //The finally block will ALWAYS run whether an excpetion is triggered or not
+        //The finally block will ALWAYS run whether an exception is triggered or not
         finally {
             if (preparedStatement != null)
                 preparedStatement.close();
@@ -103,7 +103,7 @@ public class DBUtility {
         {
             e.printStackTrace();
         }
-        //The finally block will ALWAYS run whether an excpetion is triggered or not
+        //The finally block will ALWAYS run whether an exception is triggered or not
         finally {
             if (preparedStatement != null)
                 preparedStatement.close();
