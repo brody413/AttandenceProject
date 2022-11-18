@@ -4,23 +4,23 @@ import Models.DBUtility;
 import Models.Teacher;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
-import static com.example.attandenceproject.StudentListViewController.teacher;
 
 public class TeacherListViewController {
     @FXML
     private ListView<Teacher> teacherListView;
-
-    public TeacherListViewController() {
-    }
 
     @FXML
     private void initialize() throws SQLException {
@@ -29,19 +29,21 @@ public class TeacherListViewController {
         teacherListView.getItems().addAll(DBUtility.getAllTeachers());
 
 
-        teacherListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Teacher>() {
+        teacherListView.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
-            public void changed(ObservableValue<? extends Teacher> observableValue, Teacher oldTeacher, Teacher newTeacher) {
+            public void handle(MouseEvent mouseEvent) {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("StudentListView.fxml"));
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(loader.load()));
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(new Object(){}.getClass().getResource("StudentListView.fxml"));
+                    Parent root = loader.load();
                     StudentListViewController studentController = loader.getController();
-                    studentController.setTeacher(newTeacher);
+                    studentController.setTeacher(teacherListView.getSelectionModel().getSelectedItem());
+                    Scene scene = new Scene(root);
+                    Stage stage = (Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
+                    stage.setScene(scene);
                     stage.show();
-
-                } catch (IOException e){
-
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
                 }
             }
         });

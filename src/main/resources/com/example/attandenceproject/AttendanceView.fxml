@@ -34,9 +34,9 @@
                            <children>
                               <RadioButton mnemonicParsing="false" text="Yes">
                                  <toggleGroup>
-                                    <ToggleGroup fx:id="MondayGroup" />
+                                    <ToggleGroup fx:id="mondayGroup" />
                                  </toggleGroup></RadioButton>
-                              <RadioButton mnemonicParsing="false" text="No" toggleGroup="$MondayGroup" />
+                              <RadioButton mnemonicParsing="false" text="No" toggleGroup="$mondayGroup" />
                            </children>
                            <opaqueInsets>
                               <Insets />
@@ -58,9 +58,9 @@
                            <children>
                               <RadioButton mnemonicParsing="false" text="Yes">
                                  <toggleGroup>
-                                    <ToggleGroup fx:id="TuesdayGroup" />
+                                    <ToggleGroup fx:id="tuesdayGroup" />
                                  </toggleGroup></RadioButton>
-                              <RadioButton mnemonicParsing="false" text="No" toggleGroup="$TuesdayGroup" />
+                              <RadioButton mnemonicParsing="false" text="No" toggleGroup="$tuesdayGroup" />
                            </children>
                         </VBox>
                      </children>
@@ -72,9 +72,9 @@
                            <children>
                               <RadioButton mnemonicParsing="false" text="Yes">
                                  <toggleGroup>
-                                    <ToggleGroup fx:id="WedesndayGroup" />
+                                    <ToggleGroup fx:id="wednesdayGroup" />
                                  </toggleGroup></RadioButton>
-                              <RadioButton mnemonicParsing="false" text="No" toggleGroup="$WedesndayGroup" />
+                              <RadioButton mnemonicParsing="false" text="No" toggleGroup="$wednesdayGroup" />
                            </children>
                         </VBox>
 
@@ -87,10 +87,10 @@
                            <children>
                               <RadioButton mnemonicParsing="false" text="Yes">
                                  <toggleGroup>
-                                    <ToggleGroup fx:id="ThursdayGroup" />
+                                    <ToggleGroup fx:id="thursdayGroup" />
                                  </toggleGroup>
                               </RadioButton>
-                              <RadioButton mnemonicParsing="false" text="No" toggleGroup="$TuesdayGroup" />
+                              <RadioButton mnemonicParsing="false" text="No" toggleGroup="$thursdayGroup" />
                            </children>
                         </VBox>
 
@@ -107,10 +107,10 @@
                            <children>
                               <RadioButton mnemonicParsing="false" text="Yes">
                                  <toggleGroup>
-                                    <ToggleGroup fx:id="FridayGroup" />
+                                    <ToggleGroup fx:id="fridayGroup" />
                                  </toggleGroup>
                               </RadioButton>
-                              <RadioButton mnemonicParsing="false" text="No" toggleGroup="$FridayGroup" />
+                              <RadioButton mnemonicParsing="false" text="No" toggleGroup="$fridayGroup" />
                            </children>
                         </VBox>
 
@@ -123,7 +123,7 @@
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="TeacherBTN" mnemonicParsing="false" text="Back">
+            <Button fx:id="teacherBTN" mnemonicParsing="false" text="Main Menu">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>

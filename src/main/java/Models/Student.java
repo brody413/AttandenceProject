@@ -62,6 +62,10 @@ public class Student {
         isPresent = present;
     }
 
+    public void setPresent(int day, boolean present) {
+        isPresent[day] = present;
+    }
+
     public Teacher getTeacher() {
         return teacher;
     }
@@ -70,4 +74,8 @@ public class Student {
         this.teacher = teacher;
     }
 
+    @Override
+    public String toString() {
+        return String.format("%s %s", getFirstName(), getLastName());
+    }
 }
